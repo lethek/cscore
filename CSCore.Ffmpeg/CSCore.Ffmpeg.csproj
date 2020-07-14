@@ -2,23 +2,22 @@
 
   <PropertyGroup>
     <AssemblyName>CSCore.Ffmpeg</AssemblyName>
-    <TargetFrameworks>net461;netcoreapp2.0</TargetFrameworks>
-    <VersionPrefix>1.0.0</VersionPrefix>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Copyright>Florian R.</Copyright>
     <Description>.NET Sound Library - FFmpeg Wrapper</Description>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Version>2.0.0-lethek003</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CSCore\CSCore.csproj" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
-    <Reference Include="System.Configuration" />
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,62 +26,165 @@
     <None Remove="FFmpeg\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="FFmpeg\bin\unix\x64\libavcodec.so.57">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x64\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x64\libavformat.so.57">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x64\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x64\libavutil.so.55">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x64\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x64\libswresample.so.2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x64\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x64\libavcodec-57.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x64\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x64\libavformat-57.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x64\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x64\libavutil-55.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x64\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x64\libswresample-2.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x64\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x64\libva-drm.so.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x64\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x64\libva-x11.so.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x64\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x64\libva.so.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x64\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
 
-  <ItemGroup>
-    <None Include="FFmpeg\bin\unix\x64\libavcodec.so.57">
+    <Content Include="FFmpeg\bin\unix\x86\libavcodec.so.57">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="FFmpeg\bin\unix\x64\libavformat.so.57">
+      <PackagePath>runtimes\unix-x86\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x86\libavformat.so.57">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="FFmpeg\bin\unix\x64\libavutil.so.55">
+      <PackagePath>runtimes\unix-x86\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x86\libavutil.so.55">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="FFmpeg\bin\unix\x64\libswresample.so.2">
+      <PackagePath>runtimes\unix-x86\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x86\libswresample.so.2">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="FFmpeg\bin\unix\x86\libavcodec.so.57">
+      <PackagePath>runtimes\unix-x86\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x86\libavcodec-57.so">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="FFmpeg\bin\unix\x86\libavformat.so.57">
+      <PackagePath>runtimes\unix-x86\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x86\libavformat-57.so">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="FFmpeg\bin\unix\x86\libavutil.so.55">
+      <PackagePath>runtimes\unix-x86\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x86\libavutil-55.so">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="FFmpeg\bin\unix\x86\libswresample.so.2">
+      <PackagePath>runtimes\unix-x86\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x86\libswresample-2.so">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Interops\Readme.md" />
-    <None Include="License.md" />
-    <None Include="Readme.md" />
-  </ItemGroup>
-  <ItemGroup>
+      <PackagePath>runtimes\unix-x86\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x86\libva-drm.so.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x86\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x86\libva-x11.so.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x86\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+    <Content Include="FFmpeg\bin\unix\x86\libva.so.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\unix-x86\native</PackagePath>
+      <Pack>true</Pack>
+    </Content>
+
     <Content Include="FFmpeg\bin\windows\x64\avcodec-57.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\win-x64\native</PackagePath>
+      <Pack>true</Pack>
     </Content>
     <Content Include="FFmpeg\bin\windows\x64\avformat-57.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\win-x64\native</PackagePath>
+      <Pack>true</Pack>
     </Content>
     <Content Include="FFmpeg\bin\windows\x64\avutil-55.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\win-x64\native</PackagePath>
+      <Pack>true</Pack>
     </Content>
     <Content Include="FFmpeg\bin\windows\x64\swresample-2.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\win-x64\native</PackagePath>
+      <Pack>true</Pack>
     </Content>
+
     <Content Include="FFmpeg\bin\windows\x86\avcodec-57.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\win-x86\native</PackagePath>
+      <Pack>true</Pack>
     </Content>
     <Content Include="FFmpeg\bin\windows\x86\avformat-57.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\win-x86\native</PackagePath>
+      <Pack>true</Pack>
     </Content>
     <Content Include="FFmpeg\bin\windows\x86\avutil-55.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\win-x86\native</PackagePath>
+      <Pack>true</Pack>
     </Content>
     <Content Include="FFmpeg\bin\windows\x86\swresample-2.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\win-x86\native</PackagePath>
+      <Pack>true</Pack>
     </Content>
-    <Content Include="Interops\unused\Readme.txt" />
+
+    <None Include="Interops\Readme.md" />
+    <None Include="Interops\unused\Readme.txt" />
+    <None Include="License.md" />
+    <None Include="Readme.md" />
   </ItemGroup>
 
 </Project>

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using CSCore.Ffmpeg.Interops;
@@ -33,29 +32,26 @@ namespace CSCore.Ffmpeg
 
         static FfmpegCalls()
         {
-            string platform;
-            switch (Environment.OSVersion.Platform)
-            {
-                case PlatformID.Win32NT:
-                case PlatformID.Win32S:
-                case PlatformID.Win32Windows:
-                    platform = "windows";
-                    break;
-                case PlatformID.Unix:
-                case PlatformID.MacOSX:
-                    platform = "unix";
-                    break;
-                default:
-                    throw new PlatformNotSupportedException();
-            }
-
             var assemblyDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-            if (assemblyDirectory != null)
-            {
-                string path = Path.Combine(
-                    assemblyDirectory,
-                    Path.Combine("FFmpeg", Path.Combine("bin",
-                        Path.Combine(platform, IntPtr.Size == 8 ? "x64" : "x86"))));
+            if (assemblyDirectory != null) {
+                string platform;
+                switch (Environment.OSVersion.Platform) {
+                    case PlatformID.Win32NT:
+                    case PlatformID.Win32S:
+                        platform = "win";
+                        break;
+                    case PlatformID.Win32Windows:
+                    case PlatformID.MacOSX:
+                    case PlatformID.Unix:
+                        platform = "unix";
+                        break;
+                    default:
+                        throw new PlatformNotSupportedException();
+                }
+
+                string bitness = IntPtr.Size == 8 ? "x64" : "x86";
+
+                string path = Path.Combine(assemblyDirectory, "runtimes", $"{platform}-{bitness}", "native");
 
                 InteropHelper.RegisterLibrariesSearchPath(path);
             }

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace CSCore.Ffmpeg.Interops
@@ -27,11 +29,11 @@ namespace CSCore.Ffmpeg.Interops
                     break;
                 case PlatformID.Unix:
                 case PlatformID.MacOSX:
-                    string currentValue = Environment.GetEnvironmentVariable(LD_LIBRARY_PATH);
-                    if (string.IsNullOrEmpty(currentValue) == false && currentValue.Contains(path) == false)
-                    {
-                        string newValue = currentValue + Path.PathSeparator + path;
-                        Environment.SetEnvironmentVariable(LD_LIBRARY_PATH, newValue);
+                    string libPaths = Environment.GetEnvironmentVariable(LD_LIBRARY_PATH);
+                    var searchPaths = libPaths?.Split(new [] { Path.PathSeparator }, StringSplitOptions.RemoveEmptyEntries).ToList() ?? new List<string>();
+                    if (!searchPaths.Contains(path)) {
+                        searchPaths.Add(path);
+                        Environment.SetEnvironmentVariable(LD_LIBRARY_PATH, String.Join(Path.PathSeparator.ToString(), searchPaths));
                     }
                     break;
             }

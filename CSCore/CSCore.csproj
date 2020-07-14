@@ -2,13 +2,16 @@
 
   <PropertyGroup>
     <AssemblyName>CSCore</AssemblyName>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <VersionPrefix>1.2.1.1</VersionPrefix>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
     <!-- Packet Details -->
     <Copyright>Florian R.</Copyright>
     <Description>.NET Sound Library</Description>
+    <Version>2.0.0-lethek003</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -114,10 +117,4 @@
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
-
-  <PropertyGroup>
-    <Version>2.0.0.0</Version>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
-    <FileVersion>2.0.0.0</FileVersion>
-  </PropertyGroup>
 </Project>
