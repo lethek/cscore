@@ -8,7 +8,7 @@
     <!-- Packet Details -->
     <Copyright>Florian R.</Copyright>
     <Description>.NET Sound Library</Description>
-    <Version>2.0.0-lethek003</Version>
+    <Version>2.0.0-lethek004</Version>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <FileVersion>2.0.0.0</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

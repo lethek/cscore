@@ -6,7 +6,7 @@
     <Copyright>Florian R.</Copyright>
     <Description>.NET Sound Library - FFmpeg Wrapper</Description>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Version>2.0.0-lethek003</Version>
+    <Version>2.0.0-lethek004</Version>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <FileVersion>2.0.0.0</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -47,26 +47,6 @@
       <PackagePath>runtimes\unix-x64\native</PackagePath>
       <Pack>true</Pack>
     </Content>
-    <Content Include="FFmpeg\bin\unix\x64\libavcodec-57.so">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <PackagePath>runtimes\unix-x64\native</PackagePath>
-      <Pack>true</Pack>
-    </Content>
-    <Content Include="FFmpeg\bin\unix\x64\libavformat-57.so">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <PackagePath>runtimes\unix-x64\native</PackagePath>
-      <Pack>true</Pack>
-    </Content>
-    <Content Include="FFmpeg\bin\unix\x64\libavutil-55.so">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <PackagePath>runtimes\unix-x64\native</PackagePath>
-      <Pack>true</Pack>
-    </Content>
-    <Content Include="FFmpeg\bin\unix\x64\libswresample-2.so">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <PackagePath>runtimes\unix-x64\native</PackagePath>
-      <Pack>true</Pack>
-    </Content>
     <Content Include="FFmpeg\bin\unix\x64\libva-drm.so.1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <PackagePath>runtimes\unix-x64\native</PackagePath>
@@ -99,26 +79,6 @@
       <Pack>true</Pack>
     </Content>
     <Content Include="FFmpeg\bin\unix\x86\libswresample.so.2">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <PackagePath>runtimes\unix-x86\native</PackagePath>
-      <Pack>true</Pack>
-    </Content>
-    <Content Include="FFmpeg\bin\unix\x86\libavcodec-57.so">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <PackagePath>runtimes\unix-x86\native</PackagePath>
-      <Pack>true</Pack>
-    </Content>
-    <Content Include="FFmpeg\bin\unix\x86\libavformat-57.so">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <PackagePath>runtimes\unix-x86\native</PackagePath>
-      <Pack>true</Pack>
-    </Content>
-    <Content Include="FFmpeg\bin\unix\x86\libavutil-55.so">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <PackagePath>runtimes\unix-x86\native</PackagePath>
-      <Pack>true</Pack>
-    </Content>
-    <Content Include="FFmpeg\bin\unix\x86\libswresample-2.so">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <PackagePath>runtimes\unix-x86\native</PackagePath>
       <Pack>true</Pack>
